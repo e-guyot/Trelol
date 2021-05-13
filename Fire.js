@@ -55,7 +55,6 @@ export default class Fire {
     }
 
     deleteList(list) {
-        console.log(list);
         let ref = this.ref;
         ref.doc(list.id).delete();
     }
