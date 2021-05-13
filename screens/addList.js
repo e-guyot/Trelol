@@ -8,11 +8,12 @@ export default function addList({navigation}) {
   const [name, setName] = React.useState("");
 const [color, setColor] = React.useState("");
 
-
   return (
   <View style={{marginTop: 50}}>
       <TextInput onChangeText={(name) => setName(name)} placeholder="name" />
-      <CirclePicker color={ 'green' } onChange={ (color) => setColor(color) }/>
+     {/*  <div>
+        <CirclePicker color={ '#ecf1f5' }onChange={ (color) => setColor(color) }/>
+      </div> */}
       <TouchableOpacity style={{backgroundColor: 'green'}} onPress={() => firebase.addList({ name: name, color: color, todos: []})}>
         <Text>Ajouter</Text>
       </TouchableOpacity>
