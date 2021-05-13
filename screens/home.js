@@ -42,7 +42,7 @@ export default function Home({navigation}) {
             <FlatList
                 data={lists}
                 renderItem={list => (
-                    <View style={{backgroundColor: list.item.color, flex: 4}}>
+                    <View style={{backgroundColor: list.item.color, flex: 4, padding: 10}}>
                         <RenderList name={list.item.name} color={list.item.color} todos={list.item.todos}/>
                         <Button
                             title="Update"
@@ -59,12 +59,15 @@ export default function Home({navigation}) {
                 )}
                 keyExtractor={item => item.id}
             />
-            <Button
-                title="Ajouter"
-                onPress={() =>
-                    navigation.navigate('Add')
-                }
-            />
+            <View style={{ padding: 50}}>
+                <Button
+                    title="Ajouter"
+                    onPress={() =>
+                        navigation.navigate('Add')
+                    }
+                    color="orange"
+                />
+            </View>
         </View>
     )
 
