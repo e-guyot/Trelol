@@ -31,7 +31,7 @@ const [completed, setSelection] = React.useState("");
                     )}
                     keyExtractor={todo => todo.title}
                 />
-      <TouchableOpacity style={{backgroundColor: 'green'}} onPress={() => firebase.updateList({ id: id, name: name, color: color, todos: []})}>
+      <TouchableOpacity style={{backgroundColor: 'green'}} onPress={() => firebase.updateList({ id: id, name: name, color: color, todos: todos})}>
         <Text>Mettre à jour</Text>
       </TouchableOpacity>
 

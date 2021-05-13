@@ -1,4 +1,4 @@
-import {Text, View, FlatList, Button} from 'react-native';
+import {Text, View, FlatList, CheckBox} from 'react-native';
 import * as React from 'react';
 
 export default function RenderList(props) {
@@ -9,8 +9,12 @@ export default function RenderList(props) {
                 <FlatList
                     data={props.todos}
                     renderItem={todo => (
-                        // TODO: ► change to checkbox
+                        
                         <View>
+                            <CheckBox
+                                value={todo.item.completed}
+                                disabled
+                            />
                             <Text style={{marginLeft: 20, fontSize: 24}}> ► {todo.item.title}</Text>
                         </View>
                     )}
