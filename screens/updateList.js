@@ -6,9 +6,10 @@ export default function updateList(props) {
 
   const [name, setName] = React.useState("");
 const [color, setColor] = React.useState("");
-const [todo, setTodo] = React.useState("");
 const id = props.route.params.list.item.id;
 const [completed, setSelection] = React.useState("");
+// var todos = [];
+// const [todo, addTodos] = todos.push(todo);
 
 
   return (
@@ -16,7 +17,7 @@ const [completed, setSelection] = React.useState("");
         <TextInput onChangeText={(name) => setName(name)} >
           {props.route.params.list.item.name}
         </TextInput>
-        <FlatList
+        {/* <FlatList
                     data={props.route.params.list.item.todos}
                     renderItem={todo => (
                         <View>
@@ -24,14 +25,14 @@ const [completed, setSelection] = React.useState("");
                                 value={todo.item.completed}
                                 onValueChange={(completed) => setSelection(completed)}
                             />
-                            <TextInput onChangeText={(todo) => setTodo(todo)} >
+                            <TextInput onChangeText={(todo) => addTodos(todo)} >
                                 {todo.item.title}
                             </TextInput>
                         </View>
                     )}
                     keyExtractor={todo => todo.title}
-                />
-      <TouchableOpacity style={{backgroundColor: 'green'}} onPress={() => firebase.updateList({ id: id, name: name, color: color, todos: todos})}>
+                /> */}
+      <TouchableOpacity style={{backgroundColor: 'green'}} onPress={() => firebase.updateList({ id: id, name: name, color: color, todos: []})}>
         <Text>Mettre à jour</Text>
       </TouchableOpacity>
 

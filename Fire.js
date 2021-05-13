@@ -50,6 +50,7 @@ export default class Fire {
     }
 
     addList(list) {
+        console.log(list);
         let ref = this.ref;
         ref.add(list);
     }
