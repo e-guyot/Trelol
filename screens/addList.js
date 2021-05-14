@@ -1,6 +1,5 @@
 import React from 'react';
 import {CheckBox, Text, View, TouchableOpacity, TextInput} from 'react-native';
-import Todo from "./todo"
 
 export default function addList({navigation}) {
 
